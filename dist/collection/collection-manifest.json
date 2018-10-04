@@ -1,0 +1,105 @@
+{
+  "components": [
+    {
+      "tag": "likert-grid",
+      "dependencies": [
+        "likert-grid-item"
+      ],
+      "componentClass": "LikertGrid",
+      "componentPath": "components/likert-grid/likert-grid.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/likert-grid/likert-grid.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "choices",
+          "mutable": true,
+          "attr": "choices"
+        },
+        {
+          "name": "setChoices",
+          "type": "String",
+          "attr": "set-choices"
+        },
+        {
+          "name": "setSubjects",
+          "type": "String",
+          "attr": "set-subjects"
+        },
+        {
+          "name": "subjects",
+          "mutable": true,
+          "attr": "subjects"
+        }
+      ],
+      "states": [
+        {
+          "name": "data"
+        }
+      ],
+      "events": [
+        {
+          "event": "setup"
+        },
+        {
+          "event": "updated"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "likert-grid-item",
+      "dependencies": [],
+      "componentClass": "LikertGridItem",
+      "componentPath": "components/likert-grid-item/likert-grid-item.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/likert-grid-item/likert-grid-item.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "choices",
+          "attr": "choices"
+        },
+        {
+          "name": "showChoices",
+          "type": "Boolean",
+          "attr": "show-choices"
+        },
+        {
+          "name": "subject",
+          "type": "String",
+          "attr": "subject"
+        }
+      ],
+      "states": [
+        {
+          "name": "data"
+        }
+      ],
+      "hostElement": {
+        "name": "el"
+      },
+      "events": [
+        {
+          "event": "internalUpdated"
+        }
+      ],
+      "shadow": true
+    }
+  ],
+  "collections": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.13.2",
+    "typescriptVersion": "2.9.2"
+  },
+  "bundles": []
+}
